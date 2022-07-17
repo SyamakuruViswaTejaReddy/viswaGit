@@ -1,0 +1,81 @@
+//AccessSpecifiers.java
+
+package deepb;
+
+public class AccessSpecifiers {
+	protected int a;
+	private int p;
+	public AccessSpecifiers(int a,int p) {
+		this.a=a;
+		this.p=p;
+	}
+	public int getA() {
+    	return a;
+    }
+	public int getP() {
+    	return p;
+    }
+}
+
+//AccessMain.java
+
+package deepb;
+
+import java.util.Scanner;
+
+public class AccessMain extends AccessSpecifiers {
+	private int b;
+	public int c;
+	int d;
+    public AccessMain(int a,int p,int b,int c,int d) {
+    	//calling super constructor can pass the values which is previous class to this derived class
+    	super(a,p);
+    	//this keyword refers to the particular Instance(Object)
+		this.b=b;
+		this.c=c;
+		this.d=d;
+    }
+    public int getB() {
+    	return b;
+    }
+    public int getC() {
+    	return c;
+    }
+    public int getD() {
+    	return d;
+    }
+	
+	public static void main(String[] args) {
+		//Creating Object for AccessMain(child class).
+		AccessMain ac;
+		//Reading Input values through Scanner
+		Scanner sin=new Scanner(System.in);
+		System.out.println("Value of a:");
+        int a =sin.nextInt();
+        System.out.println("Value of b:");
+        int b =sin.nextInt();
+        System.out.println("Value of c:");
+        int c =sin.nextInt();
+        System.out.println("Value of d:");
+        int d =sin.nextInt();
+        System.out.println("Value of p:");
+        int p =sin.nextInt();
+        sin.close();
+        ac=new AccessMain(a,p,b,c,d);
+        //a is acessble because its access specifier is protected, then it is available for its sub class
+        System.out.println("Value of a:"+ac.a);
+        System.out.println("Value of b:"+ac.b);
+        System.out.println("Value of c:"+ac.c);
+        System.out.println("Value of d:"+ac.d);
+        //Private Member cannot be access directly
+       // System.out.println("Value of a:"+ac.p);
+        System.out.println("Value of a:"+ac.getA());
+        System.out.println("Value of b:"+ac.getB());
+        System.out.println("Value of c:"+ac.getC());
+        System.out.println("Value of d:"+ac.getD());
+        //private member can be access by invoking the member through method
+        System.out.println("Value of p:"+ac.getP());
+       
+	}
+
+}
