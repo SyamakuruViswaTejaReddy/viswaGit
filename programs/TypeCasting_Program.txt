@@ -1,0 +1,52 @@
+//TypeCasting.java
+package smpl;
+
+import java.util.Scanner;
+
+public class TypeCasting {
+
+	public static void main(String[] args) {
+		System.out.println("Type Casting");
+		//Scanner for Giving Inputs
+		Scanner sin=new Scanner(System.in);
+		//Implicit Type Casting-Where it automatically converts from one data type to another data type
+		System.out.println("Implicit Type Casting/Widening");
+		System.out.println("Enter value in Byte:");
+		byte b=sin.nextByte();
+		short b1=b;
+		System.out.println("Implicit Type casting:Value in Short:"+b1);		
+		System.out.println("Enter value in Short:");
+		short s=sin.nextShort();
+		int s1=s;
+		System.out.println("Implicit Type casting:Value in Integer:"+s1);
+		System.out.println("Enter value in Integer:");
+		int i=sin.nextInt();
+		long i1=i;
+		System.out.println("Implicit Type casting:Value in Long:"+i1);
+		System.out.println("Enter value in Float:");
+		float f=sin.nextFloat();
+		double f1=f;
+		System.out.println("Implicit Type casting:Value in Double:"+f1);
+		//Explicit Type casting-Type Casting by mentioning Explicitly
+		System.out.println("Explicit Type Casting/Narrowing");
+		System.out.println("Enter value in Short:");
+		short w=sin.nextShort();
+		byte w1=(byte)w;
+		System.out.println("Explicit Type casting:Value in Byte:"+w1);
+		System.out.println("Enter value in Integer:");
+		int x=sin.nextInt();
+		short x1=(short)x;
+		System.out.println("Explicit Type casting:Value in Short:"+x1);
+		System.out.println("Enter value in long:");
+		long y=sin.nextLong();
+		int y1=(int)y;
+		System.out.println("Explicit Type casting:Value in Integer:"+y1);
+		System.out.println("Enter value in Double:");
+		double z=sin.nextDouble();
+		float z1=(float)z;
+		System.out.println("Explicit Type casting:Value in Float:"+z1);
+		System.out.println("Program Ends...");
+        sin.close();
+	}
+
+}
