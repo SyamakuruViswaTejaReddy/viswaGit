@@ -1,0 +1,73 @@
+         Git Commands
+
+download: https://www.git-scm.com/
+
+1.To know the version of git:  
+.............................
+-->git --version
+
+2.List the files in the directory:
+..................................
+-->ls
+
+3.Check the status of the git:
+..............................
+-->git status
+
+4.Add a file(to stagging area):
+...............................
+-->git add filename
+
+5.Add more than one file(new,modified,deleted):
+...............................................                
+-->git add --all 
+       (or) 
+-->git add -A(shorthand command)
+
+6.commit:
+.........
+   .commit keep track of our progress and changes.  
+   .each commit: change point (or) "save point".
+   .you can go back if you find bug,or want to make changes.
+  *.When we commit, we should always include a "message".
+
+   Git Commit without Stage 
+   ........................
+   . The -a option will automatically stage every changed, already tracked file.
+
+
+7.To view the history of commits for a repository:
+..................................................   
+-->git log
+
+8.Git Help:
+..........
+-->git command -help (See all the available options for the specific command)
+-->git help --all    (see all possible commands)
+
+9.Git Branch:
+............
+A branch is a new/separate version of the main repository.
+create new branch:
+-->git branch branchname
+
+10.checkout:
+...........
+Checkout is the command used to check out a branch.
+Moving us from the current branch,to the one specified at the end of the command:
+-->git checkout branch_name
+Using the -b option on checkout will create a new branch,
+and move to it, if it does not exist
+-->git checkout -b branch_name(switched to the new branch)
+ex:Create a new branch:
+-->git branch branch_name
+ex:List the existing branches:
+-->git branch
+
+11.Git Branch Merge:
+....................
+-->git merge branch
+
+12.delete branch:
+.................
+-->git branch -d branch_name
