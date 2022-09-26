@@ -1,0 +1,22 @@
+<h3 style="margin-top: 30px;">User Details</h3>
+<div class="jumbotron">
+    <div>
+        <label> <b> Id: </b></label> {{user.id}}
+    </div>
+    <div>
+        <label> <b> First Name: </b></label> {{user.firstname}}
+    </div>
+    <div>
+        <label> <b> Last Name: </b></label> {{user.lastname}}
+    </div>
+    <div>
+        <label> <b> Email Id: </b></label> {{user.email}}
+    </div>
+    <div>
+        <button (click)="updateUser(user.id)" class="btn btn-warning" style="margin-right: 3px;">Edit</button>
+        <button (click)="deleteUser(user.id)" class="btn btn-danger">Delete</button>
+    </div>
+</div>
+<div style="margin-top:-25px ;">
+    <button (click)="goBack()" class="btn btn-primary">Back</button>
+</div>
